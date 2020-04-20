@@ -1,3 +1,19 @@
-a {
+.alert {
+  margin: 10px;
+  padding: 20px;
+}
+.answer-field {
+  margin-top: 15px;
+}
+
+.answer-form label {
   color: black;
+}
+
+.answer-form input {
+  color: black;
+}
+
+#css-selector {
+  border: 3px solid red;
 }

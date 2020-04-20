@@ -13,7 +13,10 @@ function checkAnswer(e) {
     console.log('correct answer');
     confirmAnswer(`"${answer}" is correct!`, 'teal lighten-2');
   } else {
-    confirmAnswer('WRONG, try again', 'wrong');
+    confirmAnswer(
+      `"${answer}" is not the correct answer, try again!`,
+      'red lighten-1'
+    );
     removeWrongAlert();
     console.log('incorrect answer');
   }
@@ -49,7 +52,7 @@ function clearInput() {
 function removeWrongAlert() {
   setTimeout(function () {
     document.querySelector('.alert').remove();
-  }, 3000);
+  }, 5000);
 }
 
 // Event Listners
