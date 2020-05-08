@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
     <title>Find the CSS Selector</title>
@@ -43,19 +44,25 @@
                   <!-- ID, Class, Element -->
                   <ul class="collection" id="helpful-tips-wrapper">
                     <li class="collection-item avatar">
-                      <img src="./img/hashtag.png" alt="" class="circle">
-                      <span class="title">ID Selector</span>
-                      <p>Info on ID</p>
+                      <img src="./img/hashtag.png" alt="" class="circle" id="hashtag-img">
+                      <span class="title bold">ID Selector</span>
+                      <p>ID's look like -- <span class="bold">id="value"</span></p>
+                      <p><span class="bold">#</span>'s are used as ID selectors</p>
+                      <p>Example -- <span class="bold">#value</span></p>
                     </li>
                     <li class="collection-item avatar">
-                      <img src="./img/hashtag.png" alt="" class="circle">
-                      <span class="title">Class Selector</span>
-                      <p>Info on Class</p>
+                      <img src="./img/period.png" alt="" class="circle">
+                      <span class="title bold">Class Selectors</span>
+                      <p>Classes look like -- <span class="bold">class="value"</span></p>
+                      <p><span class="bold">.</span>'s are used as Class selectors</p>
+                      <p>Example -- <span class="bold">.value</span></p>
                     </li>
                     <li class="collection-item avatar">
-                      <img src="./img/hashtag.png" alt="" class="circle">
-                      <span class="title">Element Selector</span>
-                      <p>Info on Element</p>
+                      <img src="./img/html.jpg" alt="" class="circle">
+                      <span class="title bold">Element Selector</span>
+                      <p>Elments's look like -- <span class="bold">&lt;button&gt;</span></p>
+                      <p><span class="bold">Name's</span> of elements are used as element selectors</p>
+                      <p>Example -- <span class="bold">button</span></p>
                     </li>
                   </ul>
                 </div>
@@ -70,35 +77,14 @@
                     >CSS Combinators Examples</span
                   >
                   <!-- Combinator Examples -->
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
-                </div>
-                <div class="card-action">
-                  <a
-                    href="https://www.freecodecamp.org/news/css-selectors-cheat-sheet/"
-                    >Cheatsheet</a
-                  >
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
-                    >Child Combinators</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                  <span class="card-title">Dev Tools</span>
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
+
+                  <pre>
+&lt;div class="wrapper"&gt;
+   &lt;h1 class="heading"&gt;Heading&lt/h1&gt;
+   &lt;input type="text"/&gt;
+&lt/div&gt;
+                  </pre>
+                  <p>Example: <span class="bold">.wrapper input</span></p>
                 </div>
                 <div class="card-action">
                   <a
@@ -126,11 +112,11 @@
           <div class="section" id="form-section">
             <ul class="collection with-header">
               <li class="collection-header"><h4>Steps to help out</h4></li>
-              <li class="collection-item">Step 1: Open Dev Tools. <br>Hint: right click on the button and choose "inspect".</li>
-              <li class="collection-item">Step 2: Check for Classes and IDs in Dev Tools.</li>
-              <li class="collection-item">Step 3: Find out if the button has a "Parent".</li>
-              <li class="collection-item">Step 4: Test the selector in the Developers Console.
-                <br><br>Copy/Paste <span id="bold">document.querySelectorAll('<span class='span-color-red'>CSS Selector Goes Here</span>')</span> into the developers console & swap out the <span class="span-color-red">red text</span> with your selector.<br><br>Press enter and view the results</li>
+              <li class="collection-item">Step 1: Open Dev Tools. <br><br>Hint: right click on the element and choose "inspect".</li>
+              <li class="collection-item">Step 2: Check for Classes and IDs in Dev Tools on the element.</li>
+              <li class="collection-item">Step 3: Find out if the element has a "Parent" element.</li>
+              <li class="collection-item">Step 4: Test the selector in the Developers Console by running the below code.
+                <br><br>Copy/Paste <span class="bold">document.querySelectorAll('<span class='span-color-red'>CSS Selector Goes Here</span>')</span> into the developers console & swap out the <span class="span-color-red">red text</span> with your selector.<br><br>Press enter and view the results</li>
               <li class="collection-item">Hint: A CSS Combinator will be useful!</li>
             </ul>
             <input type="submit" value="Find this Element's CSS Selector" />

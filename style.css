@@ -22,11 +22,19 @@
   color: red;
 }
 
-#bold {
+.bold {
   font-weight: bold;
 }
 
 #helpful-tips-wrapper span,
 p {
   color: black;
+}
+
+#hashtag-img {
+  height: px;
+}
+
+#helpful-tips-wrapper p {
+  margin: 10px 0;
 }
