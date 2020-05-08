@@ -9,7 +9,7 @@ function checkAnswer(e) {
   const answer = answerInput.value;
   console.log(answer);
 
-  if (answer === '.form-section > input' || answer === '.form-section input') {
+  if (answer === '#form-section > input' || answer === '#form-section input') {
     console.log('correct answer');
     confirmAnswer(`"${answer}" is correct!`, 'teal lighten-2');
   } else {
@@ -39,8 +39,6 @@ function confirmAnswer(message, className) {
   container.insertBefore(div, insertBefore);
   clearInput();
   console.log(div);
-
-  // Timout after 3 seconds
 }
 
 // clear field
