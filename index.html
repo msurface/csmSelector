@@ -40,23 +40,24 @@
               <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                   <span class="card-title">CSS Selectors Overview</span>
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
-                </div>
-                <div class="card-action">
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"
-                    >MDN</a
-                  >
-                  <a href="https://guide.freecodecamp.org/css/selectors/"
-                    >Free Code Camp</a
-                  >
-                  <a href="https://www.youtube.com/watch?v=1h5StQJ8hww"
-                    >YouTube Video</a
-                  >
+                  <!-- ID, Class, Element -->
+                  <ul class="collection" id="helpful-tips-wrapper">
+                    <li class="collection-item avatar">
+                      <img src="./img/hashtag.png" alt="" class="circle">
+                      <span class="title">ID Selector</span>
+                      <p>Info on ID</p>
+                    </li>
+                    <li class="collection-item avatar">
+                      <img src="./img/hashtag.png" alt="" class="circle">
+                      <span class="title">Class Selector</span>
+                      <p>Info on Class</p>
+                    </li>
+                    <li class="collection-item avatar">
+                      <img src="./img/hashtag.png" alt="" class="circle">
+                      <span class="title">Element Selector</span>
+                      <p>Info on Element</p>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -66,8 +67,9 @@
               <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                   <span class="card-title"
-                    >CSS Cheatsheet & Child Combinators</span
+                    >CSS Combinators Examples</span
                   >
+                  <!-- Combinator Examples -->
                   <p>
                     I am a very simple card. I am good at containing small bits
                     of information. I am convenient because I require little
@@ -127,7 +129,9 @@
               <li class="collection-item">Step 1: Open Dev Tools. <br>Hint: right click on the button and choose "inspect".</li>
               <li class="collection-item">Step 2: Check for Classes and IDs in Dev Tools.</li>
               <li class="collection-item">Step 3: Find out if the button has a "Parent".</li>
-              <li class="collection-item">Hint: A Child combinator could be useful!</li>
+              <li class="collection-item">Step 4: Test the selector in the Developers Console.
+                <br><br>Copy/Paste <span id="bold">document.querySelectorAll('<span class='span-color-red'>CSS Selector Goes Here</span>')</span> into the developers console & swap out the <span class="span-color-red">red text</span> with your selector.<br><br>Press enter and view the results</li>
+              <li class="collection-item">Hint: A CSS Combinator will be useful!</li>
             </ul>
             <input type="submit" value="Find this Element's CSS Selector" />
           </div>

@@ -17,3 +17,16 @@
 #css-selector {
   border: 3px solid red;
 }
+
+.span-color-red {
+  color: red;
+}
+
+#bold {
+  font-weight: bold;
+}
+
+#helpful-tips-wrapper span,
+#helpful-tips-wrapper p {
+  color: black;
+}
