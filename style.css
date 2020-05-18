@@ -73,3 +73,8 @@ p {
   font-weight: bold;
   border-radius: 3px;
 }
+
+.timer span {
+  font-size: larger;
+  font-weight: bolder;
+}

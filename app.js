@@ -5,6 +5,8 @@ const startBtn = document.querySelector('#start');
 const answerSection = document.querySelector('.answer');
 const guessesSpan = document.querySelector('#guesses-remaining');
 const answerForm = document.querySelector('.answer-form');
+const minutesSpan = document.querySelector('#minutes');
+const secondsSpan = document.querySelector('#seconds');
 
 // global variables
 let guesses = 3;
@@ -32,17 +34,14 @@ function checkAnswer(e) {
       `"${answer}" is correct! Please take a screen shot of your answer and time.`,
       'teal lighten-2'
     );
-    document.querySelector('.answer h4.center-align').innerText =
-      'Take a Screen Shot of Your Answer and Time';
+    taskWin();
   } else if (guesses === 1) {
     console.log('ZERO');
     confirmAnswer(
       `"${answer}" is not the correct answer, No More Guesses!`,
       'red lighten-1'
     );
-    guessesSpan.innerText = 0;
-    answerForm.style.display = 'none';
-    document.querySelector('.answer h4.center-align').innerText = 'Game Over';
+    disableTask();
   } else {
     confirmAnswer(
       `"${answer}" is not the correct answer, try again!`,
@@ -55,6 +54,21 @@ function checkAnswer(e) {
   }
 
   e.preventDefault();
+}
+
+// task win
+function taskWin() {
+  document.querySelector('.answer h4.center-align').innerText =
+    'Take a Screen Shot of Your Answer and Time';
+  clearInterval(interval);
+}
+
+// stop the task
+function disableTask() {
+  guessesSpan.innerText = 0;
+  answerForm.style.display = 'none';
+  document.querySelector('.answer h4.center-align').innerText = 'Game Over';
+  clearInterval(interval);
 }
 
 // start click function
@@ -93,13 +107,42 @@ function removeWrongAlert() {
   }, 5000);
 }
 
-// // decrease gussues
-// function decreaseGuesses() {
-//   guesses--;
-//   guessesSpan.innerText = guesses;
-//   guesses = guesses;
-//   console.log(`90: ${guesses}`);
-// }
+// Count Up Timer
+let seconds = 0;
+let minutes = 0;
+
+let interval = setInterval(increment, 1000);
+
+function increment() {
+  seconds++;
+  secondsSpan.innerText = seconds;
+
+  // setting the minutes HTML
+  if (minutes < 10) {
+    minutesSpan.innerText = `0${minutes}`;
+  } else {
+    minutesSpan.innerText = minutes;
+  }
+
+  // setting the seconds
+  if (seconds < 10) {
+    secondsSpan.innerText = `0${seconds}`;
+  } else {
+    secondsSpan.innerText = seconds;
+  }
+
+  if (seconds === 59 && minutes <= 15) {
+    seconds = 0;
+    minutes++;
+  } else if (minutes >= 15) {
+    console.log('CLEAR MINUTES');
+    confirmAnswer(`Time is Up. Rejoin the Group.`, 'red lighten-1');
+    secondsSpan.innerText = `00`;
+    disableTask();
+  }
+
+  console.log(seconds);
+}
 
 // Event Listners
 answerSubmitBtn.addEventListener('click', checkAnswer);
