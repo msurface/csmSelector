@@ -135,13 +135,13 @@ function increment() {
     seconds = 0;
     minutes++;
   } else if (minutes >= 15) {
-    console.log('CLEAR MINUTES');
+    // console.log('CLEAR MINUTES');
     confirmAnswer(`Time is Up. Rejoin the Group.`, 'red lighten-1');
     secondsSpan.innerText = `00`;
     disableTask();
   }
 
-  console.log(seconds);
+  // console.log(seconds);
 }
 
 // Event Listners
